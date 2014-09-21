@@ -1,7 +1,10 @@
 <!-- Slideshow -->
-<section id='slideshow'>
+<section id='header'>
   <div class='container'>
-
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 title"><h3>Join our community of 12,039 happy customers!</h3><br><h5>Deploy your VPS server now.</h5></div>
+    </div>
   </div>
 </section>
 
@@ -15,3 +18,67 @@
     </div>
 </section>
 
+<!-- Sneak peek -->
+<section id="sneak-peek">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>A little Sneak-Peek of Hosting Project</h3>
+        <p>
+          You can decide whether you want to stop and start the contract, your servers are paid hourly
+        </p>
+        <div class="features">
+          <div class="box">
+            <%= image_tag 'shop/icons/Magic@2x.png', :width => '100', :height => '100' %>
+            <h6>Easy to use</h6>
+            <p>
+              To get started, you just have to press an install button. Nothing more!
+            </p>
+          </div>
+          <div class="box">
+            <%= image_tag 'shop/icons/Responsive1@2x.png', :width => '100', :height => '100' %>
+            <h6>Mobile applications</h6>
+            <p>
+              You can monitor and administrate your servers with a mobile application, never miss anything!
+            </p>
+          </div>
+          <div class="box">
+            <%= image_tag 'shop/icons/Book@2x.png', :width => '100', :height => '100' %>
+            <h6>Got questions? We can help you!</h6>
+            <p>
+              Your server is down? Don't worry, you can contact us on the live chat, or open a ticket if we're not online. A wiki is also available with all the tutorials you need to administrate your VPS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-sm-offset-2 text-center">
+        <div id="sneak-peek_myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag 'shop/home/iPhone.png', :width => '302', :height => '635' %>
+            </div>
+            <div class="item">
+              <%= image_tag 'shop/home/iPhone.png', :width => '302', :height => '635' %>
+            </div>
+            <div class="item">
+              <%= image_tag 'shop/home/iPhone.png', :width => '302', :height => '635' %>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li data-target="#sneak-peek_myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#sneak-peek_myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#sneak-peek_myCarousel" data-slide-to="2" class=""></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Try it now -->
+<section id="try-it-now">
+  <div class="container">
+    <span>You have the idea, you have the awesomeness. Now, you have the server.</span>
+    <a class="btn btn-large btn-danger" href="#">TRY IT NOW</a>
+  </div>
+</section>

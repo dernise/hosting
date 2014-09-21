@@ -1,68 +1,190 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /*
  * All header styles
  */
-header
+.navbar
 {
-  position: fixed;
-  width: 100%;
-  height: 72px;
-  background-color: #34495e;
-  left: 0;
-  top: 0;
+  background-color: #2c3e50;
+  border:none;
+  margin-bottom: 0px;
+  min-height: 74px;
+  border-radius: 0px;
+  color: white;
 
-  #logo
+  .navbar-toggle .icon-bar
   {
-    color: #fff;
-    float:left;
-    margin-top: 7px;
-    margin-left: 10px;
-    font-size: 26px;
-    padding:10px;
+    background-color:white;
   }
 
-  #header-menu
+  .navbar-brand
   {
-    float: right;
-    list-style: none;
+    color: white;
+    font-size: 20px;
+  }
 
-    li{
-      float: left;
-      color: #bdc3c7;
-      font-size: 14px;
-      padding: 10px;
-    }
+  .navbar-brand:hover, .navbar-brand:focus {
+    color: #bdc3c7;
+    background-color: transparent;
+  }
 
-    .active
-    {
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      background-color: #2c3e50;
-      color: #ecf0f1;
+  .navbar-header
+  {
+    margin-top: 12px;
+  }
+
+  .navbar-nav li a {
+    font-family: "Lato", sans-serif;
+    padding: 12px;
+    font-size: 14px;
+    margin-left: 20px;
+    color: white;
+  }
+
+  .navbar-nav .active a
+  {
+    color: white;
+    border-radius: 6px;
+    background-color: #34495e;
+  }
+
+  .navbar-collapse
+  {
+     margin-top: 16px;
+  }
+
+  .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #bdc3c7;
+    background-color: transparent;
+  }
+
+  .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+    color: white;
+  }
+
+  .navbar-collapse, .navbar-form {
+    border:none;
+  }
+
+  .navbar-toggle {
+    border:none;
+  }
+}
+
+/*
+ * All footer styles
+ */
+footer {
+  font-size: 14px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background: #2c3e50;
+  color: #bdc3c7;
+
+  .v-center,
+  .v-center {
+    display: table;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .v-center.row:before,
+    .v-center.row:before,
+    .v-center.row:after,
+    .v-center.row:after {
+      display: none;
     }
   }
+  @media (max-width: 767px) {
+    .v-center {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .v-center.row {
+      display: block;
+      width: auto;
+    }
+
+    .v-center.row:before,
+    .v-center.row:after {
+      display: none;
+    }
+
+    .v-center.row > * {
+      display: block;
+      vertical-align: baseline;
+    }
+  }
+
+   .row.v-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+   a {
+    color: #ffffff;
+    font-weight: normal;
+  }
+   a:hover,
+   a:focus,
+   a.active {
+    color: #bdc3c7;
+  }
+   h1,
+   .h1,
+   h2,
+   .h2,
+   h3,
+   .h3,
+   h4,
+   .h4,
+   h5,
+   .h5,
+   h6,
+   .h6 {
+    color: white;
+  }
+   .brand {
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+  }
+   .additional-links a {
+    color: #bdc3c7;
+    text-decoration: underline;
+  }
+   .additional-links a:hover,
+   .additional-links a:focus,
+   .additional-links a.active {
+    color: #ffffff;
+  }
+   h6 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: none;
+  }
+   .address {
+    line-height: 1.6;
+  }
+  @media (max-width: 767px) {
+     .row > [class*="col-sm-"] {
+      margin-top: 30px;
+    }
+     .row > [class*="col-sm-"]:first-child {
+      margin-top: 0;
+    }
+  }
+
 }
 
 /*
  * All home styles
  */
-
-section
-{
-  width: 100%;
-}
-
-#slideshow
-{
-  background-image: url(image_path('shop/slideshow/1.png'));
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 580px;
-}
 
 #login-bar
 {
@@ -74,21 +196,191 @@ section
   position: relative;
   text-align: center;
 
+  .form-control
+  {
+    display:inline;
+  }
+
   button
   {
+    width: 10%;
     margin-left: 18px;
+  }
+
+  input
+  {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 1200px){
+    button
+    {
+      display:block;
+      width: 100%;
+      height: 58px;
+      margin: 10px auto 0px auto;
+    }
+
+    input
+    {
+      display:block;
+      width: 100%;
+      height: 58px;
+      margin: 10px auto 0px auto;
+    }
   }
 }
 
-#social
+/*
+ * Slideshow
+ */
+#header
 {
-  height: 200px;
-  background-color: #fff;
+  height: 340px;
+  background-color: #2c3e50;
+
+  .title
+  {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+  }
 }
 
-#features
+/*
+ * All Sneak-Peek styles
+ */
+#sneak-peek
 {
-  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  h3
+  {
+    font-size: 30px;
+    font-weight: normal;
+    color: #16a085;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  p
+  {
+    font-size: 16px;
+    font-weight: normal;
+    color: #7f8c8d;
+  }
+  .carousel{
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    
+    @media (max-width: 767px) {
+      margin-top: 80px;
+    }
+    .item img {
+      margin: 0 auto;
+    }
+    .carousel-indicators {
+      position: static;
+      text-align: center;
+      margin-left: 60px;
+      padding-top: 40px;
+    }
+    .carousel-indicators li {
+      display: inline-block;
+      float: none;
+      width: 12px;
+      height: 12px;
+      margin-left: 7px;
+      text-indent: -999px;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .carousel-indicators li:first-child {
+      margin-left: 0;
+    }
+    .carousel-indicators .active {
+      background-color: #c0392b;
+    }
+    .item {
+      -webkit-transition: 0.6s ease-in-out opacity;
+      -moz-transition: 0.6s ease-in-out opacity;
+      -o-transition: 0.6s ease-in-out opacity;
+      transition: 0.6s ease-in-out opacity;
+      left: 0!important;
+    }
+    .item.active.left,
+    .item.active.right {
+      opacity: 0;
+      z-index: 2;
+    }
+    .item.next {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  
+  .features
+  {
+    .box
+    {
+      position: relative;
+      padding-left: 140px;
+      padding-top: 50px;
+      margin-top: 50px;
+      min-height: 100px;
+      border-top: 2px solid #ecf0f1;
+
+      img
+      {
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+    }
+
+    h6
+    {
+      text-transform: none;
+      font-size: 22px;
+      font-weight: normal;
+      color: #16a085;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+  }
+}
+
+/*
+ * All try it now styles
+ */
+#try-it-now
+{
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background: rgba(241, 196, 15, 0.1);
+  font-size: 24px;
+  font-weight: normal;
+  color: #34495e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+
+  .btn
+  {
+    margin-left: 33px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 /*
@@ -97,16 +389,8 @@ section
 body
 {
   margin:0;
-  padding-top: 72px;
   line-height: 1.4;
   font-family: "Lato", sans-serif;
-
-}
-
-.container
-{
-  width: 70%;
-  margin: auto;
 }
 
 .form-control
@@ -171,4 +455,9 @@ body
 .button-green:hover
 {
   background-color: #1abc9c;
+}
+
+section
+{
+  width: 100%;
 }
