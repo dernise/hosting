@@ -1,0 +1,34 @@
+<section id="register-title">
+  <p>Create your account now</p>
+</section>
+
+<section id="register-content">
+  <div class='container'>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <%= form_for :user do |f|  %>
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <%= f.text_field  :username, class:'form-control', placeholder: 'Username' %>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <%= f.text_field :password, type: 'password', class:'form-control', placeholder: 'Password' %>
+          </div>
+        <div class="input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+           <%= f.text_field  :email, class:'form-control', placeholder: 'Email'  %>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+          <%= f.text_field  :name, class:'form-control', placeholder:'Name' %>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+          <%= f.text_field  :surname, class:'form-control', placeholder: 'Surname' %>
+        </div>
+        <%= f.submit 'Register', class: "btn btn-primary" %>
+      <%end%>
+    </div>
+  </div>
+</section>
