@@ -15,6 +15,10 @@
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
             <%= f.text_field :password, type: 'password', class:'form-control', placeholder: 'Password' %>
           </div>
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <%= f.text_field :password, type: 'password', class:'form-control', placeholder: 'Password confirmation' %>
+          </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
            <%= f.text_field  :email, class:'form-control', placeholder: 'Email'  %>
@@ -27,7 +31,9 @@
           <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
           <%= f.text_field  :surname, class:'form-control', placeholder: 'Surname' %>
         </div>
-        <%= f.submit 'Register', class: "btn btn-primary" %>
+        <div class="button-group">
+          <%= f.submit 'Register', class: "btn btn-primary" %>
+        </div>
       <%end%>
     </div>
   </div>
