@@ -20,4 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navbar:
+    home: 'Home'
+    features: 'Features'
+    prices: 'Prices'
+    login: 'Log in'
+    signup: 'Sign up'
+
+  footer:
+    tos: 'Be sure to take a look at our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>'
+    address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
+
+  home:
+    login: "Login"
+    register: "Register"
+    community: "<h3>Join our community of 12,039 happy customers !</h3><br><h5>Deploy your VPS server now.</h5>"
+    text: "<h3>A little Sneak-Peek of Hosting Project</h3><p>You can decide whether you want to stop and start the
+            contract, your servers are paid hourly</p>"
+    easy: "<h6>Easy to use</h6>
+          <p>To get started, you just have to press an install button. Nothing more !"
+    appli: "<h6>Mobile applications</h6>
+           <p>You can monitor and administrate your servers with the mobile application, never miss anything !</p>"
+    questions: "<h6>Got questions ? We can help you !</h6>
+                <p>Your server is down ? Don't worry, you can contact us on the live chat, or open a ticket if we're not online.
+                A wiki is also available with all the tutorials you need to administrate your VPS.</p>"
+    slogan: "You have the idea, you have the awesomeness. Now, you have the server."
+    try: "TRY IT NOW"

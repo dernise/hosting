@@ -3,7 +3,7 @@
   <div class='container'>
     <div class="row">
       <div class="col-md-3"></div>
-      <div class="col-md-6 title"><h3>Join our community of 12,039 happy customers!</h3><br><h5>Deploy your VPS server now.</h5></div>
+      <div class="col-md-6 title"><%= t('home.community').html_safe %></div>
     </div>
   </div>
 </section>
@@ -13,8 +13,8 @@
     <div class='container'>
         <input type="email" class="form-control" placeholder="Login/E-mail">
         <input type="password" class="form-control" placeholder="Password">
-        <button class="button button-green">Login</button>
-        <button class="button button-red">Register</button>
+        <button class="button button-green"><%= t('home.login') %></button>
+        <button class="button button-red"><%= t('home.register') %></button>
     </div>
 </section>
 
@@ -23,31 +23,20 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <h3>A little Sneak-Peek of Hosting Project</h3>
-        <p>
-          You can decide whether you want to stop and start the contract, your servers are paid hourly
-        </p>
+        <%= t('home.text').html_safe %>
         <div class="features">
           <div class="box">
             <%= image_tag 'shop/icons/Magic@2x.png', :width => '100', :height => '100' %>
-            <h6>Easy to use</h6>
-            <p>
-              To get started, you just have to press an install button. Nothing more!
+              <%= t('home.easy').html_safe %>
             </p>
           </div>
           <div class="box">
             <%= image_tag 'shop/icons/Responsive1@2x.png', :width => '100', :height => '100' %>
-            <h6>Mobile applications</h6>
-            <p>
-              You can monitor and administrate your servers with a mobile application, never miss anything!
-            </p>
+            <%= t('home.appli').html_safe %>
           </div>
           <div class="box">
             <%= image_tag 'shop/icons/Book@2x.png', :width => '100', :height => '100' %>
-            <h6>Got questions? We can help you!</h6>
-            <p>
-              Your server is down? Don't worry, you can contact us on the live chat, or open a ticket if we're not online. A wiki is also available with all the tutorials you need to administrate your VPS.
-            </p>
+            <%= t('home.questions').html_safe %>
           </div>
         </div>
       </div>
@@ -78,7 +67,7 @@
 <!-- Try it now -->
 <section id="try-it-now">
   <div class="container">
-    <span>You have the idea, you have the awesomeness. Now, you have the server.</span>
-    <a class="btn btn-large btn-danger" href="#">TRY IT NOW</a>
+    <span><%= t('home.slogan') %></span>
+    <a class="btn btn-large btn-danger" href="#"><%= t('home.try') %></a>
   </div>
 </section>

@@ -1,1 +1,27 @@
 fr:
+  navbar:
+    home: 'Accueil'
+    features: 'Fonctionnalités'
+    prices: 'Prix'
+    login: 'Connexion'
+    signup: 'Inscription'
+
+  footer:
+    tos: "Soyez sûrs de lire nos <a href='#'>Conditions Générales d'utilisation</a> et <a href='#'>Politique de Confidentialité</a>"
+    address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
+
+  home:
+    login: "Connexion"
+    register: "Inscription"
+    community: "<h3>Rejoignez notre communauté de 12,039 utilisateurs satisfaits !</h3><br><h5>Déployez votre serveur VPS dès maintenant.</h5>"
+    text: "<h3>Un rapide coup d'oeil sur Hosting Project</h3><p>Vous pouvez choisir quand démarrer et quand arrêter le contrat,
+          vos serveurs sont payés à l'heure.</p>"
+    easy: "<h6>Facile d'utilisation</h6>
+          <p>Pour commencer, vous avez juste à cliquer sur le bouton Installer. Rien de plus !"
+    appli: "<h6>Application mobile</h6>
+           <p>Vous pouvez gérer et administrer vos serveurs grâce à l'application mobile, ne manquez rien !</p>"
+    questions: "<h6>Vous avez des questions ?Nous pouvons vous aider !</h6>
+               <p>Votre serveur est down ? Pas d'inquiètude, vous pouvez nous contacter via le chat, ou ouvrir un ticket si nous ne sommes pas en ligne.
+               Un wiki est également disponible avec tous les tutoriels dont vous aurez besoin pour gérer votre VPS.</p>"
+    slogan: "Vous avez l'idée, vous avez le talent. Maintenant, vous avez le serveur."
+    try: "ESSAYER MAINTENANT"
