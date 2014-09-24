@@ -11,6 +11,8 @@ fr:
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
 
   home:
+    login_mail: "Nom d'utilisateur/E-mail"
+    password: "Mot de passe"
     login: "Connexion"
     register: "Inscription"
     community: "<h3>Rejoignez notre communauté de 12,039 utilisateurs satisfaits !</h3><br><h5>Déployez votre serveur VPS dès maintenant.</h5>"
@@ -25,3 +27,14 @@ fr:
                Un wiki est également disponible avec tous les tutoriels dont vous aurez besoin pour gérer votre VPS.</p>"
     slogan: "Vous avez l'idée, vous avez le talent. Maintenant, vous avez le serveur."
     try: "ESSAYER MAINTENANT"
+
+ new:
+    errors: "Création du compte impossible. Veuillez corriger ces erreurs svp :"
+    create: "Créez votre compte maintenant"
+    username: "Nom d'utilisateur"
+    password: "Mot de passe"
+    confirmation: "Confirmation mot de passe"
+    email: "Adresse mail"
+    name: "Prénom"
+    surname: "Nom"
+    register: "S'inscrire"
