@@ -49,7 +49,7 @@ en:
     slogan: "You have the idea, you have the awesomeness. Now, you have the server."
     try: "TRY IT NOW"
 
-  new:
+  register:
     errors: "Cannot create your account. Please solve the following errors :"
     create: "Create your account now"
     username: "Username"

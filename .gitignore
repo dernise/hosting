@@ -16,5 +16,6 @@
 /tmp
 
 #Ignore all RubyMine files
-/.idea
+.idea/
+
 Gemfile.lock
