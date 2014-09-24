@@ -1,14 +1,14 @@
 <% if(@user.errors.any?) %>
   <section id="register-error">
-  <p><%= t('register.errors') %></p>
-  <% for message in @user.errors.full_messages %>
-    <li><%= message %></li>
-  <% end %>
+    <p><%= t('register.errors') %></p>
+    <% for message in @user.errors.full_messages %>
+      <li><%= message %></li>
+    <% end %>
   </section>
 <% else %>
-    <section id="register-title">
-      <p><%= t('register.create') %></p>
-    </section>
+  <section id="register-title">
+    <p><%= t('register.create') %></p>
+  </section>
 <% end %>
 
 <section id="register-content">
