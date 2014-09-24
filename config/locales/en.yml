@@ -59,3 +59,4 @@ en:
     name: "Name"
     surname: "Surname"
     register: "Register"
+    signed_up: "You are now signed up !"

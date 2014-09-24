@@ -9,14 +9,20 @@
 </section>
 
 <!-- Login bar -->
-<section id='login-bar'>
+<% if (!flash[:notice].nil?) #if there is a notice from any other pages (like register) %>
+  <section id='notice'>
+    <%= flash[:notice] %>
+  </section>
+<% else %>
+  <section id='login-bar'>
     <div class='container'>
-        <input type="email" class="form-control" placeholder=<%= t('home.login_mail') %>>
-        <input type="password" class="form-control" placeholder=<%= t('home.password') %>>
-        <button class="button button-green"><%= t('home.login') %></button>
-        <button class="button button-red"><%= t('home.register') %></button>
+      <input type="email" class="form-control" placeholder='<%= t('home.login_mail') %>'>
+      <input type="password" class="form-control" placeholder='<%= t('home.password') %>'>
+      <button class="button button-green"><%= t('home.login') %></button>
+      <button class="button button-red"><%= t('home.register') %></button>
     </div>
-</section>
+  </section>
+<% end %>
 
 <!-- Sneak peek -->
 <section id="sneak-peek">

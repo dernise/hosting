@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  get 'pages/contact'
-  get 'pages/tos'
 
-  #Sign up
-  get '/register' => 'users#new', as: :register
+  scope "(:locale)", locale: /en|de|fr/ do
+    get 'pages/home'
+    get 'pages/contact'
+    get 'pages/tos'
 
-  resources :users
+    #Sign up
+    get '/register' => 'users#new', as: :register
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+    resources :users
 
-  # You can have the root of your site routed with "root"
-  root 'pages#home'
+    # The priority is based upon order of creation: first created -> highest priority.
+    # See how all your routes lay out with "rake routes".
+    # You can have the root of your site routed with "root"
+    root 'pages#home'
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

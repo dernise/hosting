@@ -38,6 +38,7 @@ fr:
     name: "Prénom"
     surname: "Nom"
     register: "S'inscrire"
+    signed_up: "Tu es maintenant inscrit!"
 
   # Traductions de rails
   date:

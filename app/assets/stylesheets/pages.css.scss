@@ -186,6 +186,19 @@ footer {
  * All home styles
  */
 
+#notice
+{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #27ae60;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
 #login-bar
 {
   background-color: #edeff1;
@@ -417,6 +430,16 @@ body
   margin:0;
   line-height: 1.4;
   font-family: "Lato", sans-serif;
+}
+
+.dropdown-menu
+{
+  background-color: #34495e;
+
+  a:hover
+  {
+    background-color: #34495e;
+  }
 }
 
 .button
