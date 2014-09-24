@@ -1,15 +1,15 @@
-  <% if(@user.errors.any?) %>
-    <section id="register-error">
-      <p>Cannot create your account. Please solve the following errors :</p>
-      <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-      <% end %>
-    </section>
-  <% else %>
-    <section id="register-title">
-      <p>Create your account now</p>
-    </section>
-  <% end %>
+<% if(@user.errors.any?) %>
+  <section id="register-error">
+    <p>Cannot create your account. Please solve the following errors :</p>
+    <% for message in @user.errors.full_messages %>
+        <li><%= message %></li>
+    <% end %>
+  </section>
+<% else %>
+  <section id="register-title">
+    <p>Create your account now</p>
+  </section>
+<% end %>
 
 <section id="register-content">
   <div class='container'>
