@@ -32,6 +32,8 @@ en:
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
 
   home:
+    login_mail: "Login/E-mail"
+    password: "Password"
     login: "Login"
     register: "Register"
     community: "<h3>Join our community of 12,039 happy customers !</h3><br><h5>Deploy your VPS server now.</h5>"
@@ -46,3 +48,14 @@ en:
                 A wiki is also available with all the tutorials you need to administrate your VPS.</p>"
     slogan: "You have the idea, you have the awesomeness. Now, you have the server."
     try: "TRY IT NOW"
+
+  new:
+    errors: "Cannot create your account. Please solve the following errors :"
+    create: "Create your account now"
+    username: "Username"
+    password: "Password"
+    confirmation: "Password confirmation"
+    email: "Email"
+    name: "Name"
+    surname: "Surname"
+    register: "Register"

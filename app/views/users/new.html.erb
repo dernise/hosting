@@ -1,13 +1,13 @@
   <% if(@user.errors.any?) %>
     <section id="register-error">
-      <p>Cannot create your account. Please solve the following errors :</p>
+      <p><%= t('new.errors') %></p>
       <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
       <% end %>
     </section>
   <% else %>
     <section id="register-title">
-      <p>Create your account now</p>
+      <p><%= t('new.create') %></p>
     </section>
   <% end %>
 
@@ -18,30 +18,30 @@
       <%= form_for @user do |f|  %>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-            <%= f.text_field  :username, class:'form-control', placeholder: 'Username' %>
+            <%= f.text_field  :username, class:'form-control', placeholder: t('new.username')%>
           </div>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-            <%= f.text_field :password, type: 'password', class:'form-control', placeholder: 'Password' %>
+            <%= f.text_field :password, type: 'password', class:'form-control', placeholder: t('new.password') %>
           </div>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-            <%= f.text_field :password_confirmation, type: 'password', class:'form-control', placeholder: 'Password confirmation' %>
+            <%= f.text_field :password_confirmation, type: 'password', class:'form-control', placeholder: t('new.confirmation') %>
           </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-           <%= f.text_field  :email, class:'form-control', placeholder: 'Email'  %>
+           <%= f.text_field  :email, class:'form-control', placeholder: t('new.email')  %>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-          <%= f.text_field  :name, class:'form-control', placeholder:'Name' %>
+          <%= f.text_field  :name, class:'form-control', placeholder: t('new.name') %>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-          <%= f.text_field  :surname, class:'form-control', placeholder: 'Surname' %>
+          <%= f.text_field  :surname, class:'form-control', placeholder: t('new.surname') %>
         </div>
         <div class="button-group">
-          <%= f.submit 'Register', class: "btn btn-primary" %>
+          <%= f.submit t('new.register'), class: "btn btn-primary" %>
         </div>
       <%end%>
     </div>
