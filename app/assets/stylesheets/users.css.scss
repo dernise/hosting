@@ -19,6 +19,23 @@
   font-weight: 300;
 }
 
+#register-error
+{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #c0392b;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+
+  li{
+    list-style-type: none;
+  }
+}
+
 #register-content
 {
   padding-top: 25px;

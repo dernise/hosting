@@ -1,12 +1,21 @@
-<section id="register-title">
-  <p>Create your account now</p>
-</section>
+  <% if(@user.errors.any?) %>
+    <section id="register-error">
+      <p>Cannot create your account. Please solve the following errors :</p>
+      <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+      <% end %>
+    </section>
+  <% else %>
+    <section id="register-title">
+      <p>Create your account now</p>
+    </section>
+  <% end %>
 
 <section id="register-content">
   <div class='container'>
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <%= form_for :user do |f|  %>
+      <%= form_for @user do |f|  %>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
             <%= f.text_field  :username, class:'form-control', placeholder: 'Username' %>
@@ -17,7 +26,7 @@
           </div>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-            <%= f.text_field :password, type: 'password', class:'form-control', placeholder: 'Password confirmation' %>
+            <%= f.text_field :password_confirmation, type: 'password', class:'form-control', placeholder: 'Password confirmation' %>
           </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
