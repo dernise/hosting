@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
     logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
   end
+
+  def current_cart
+    session[:cart_id] ||= Cart.create!.id
+    @current_cart ||= Cart.find(session[:cart_id])
+  end
 end
