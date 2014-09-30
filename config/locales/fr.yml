@@ -5,7 +5,7 @@ fr:
     prices: 'Prix'
     login: 'Connexion'
     signup: 'Inscription'
-
+    logout: 'Déconnexion'
   footer:
     tos: "Soyez sûrs de lire nos <a href='#'>Conditions Générales d'utilisation</a> et <a href='#'>Politique de Confidentialité</a>"
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
@@ -39,6 +39,13 @@ fr:
     surname: "Nom"
     register: "S'inscrire"
     signed_up: "Tu es maintenant inscrit!"
+
+  login:
+      text: "Connectez vous à votre compte"
+      loginormail: "Nom d'utilisateur ou adresse mail"
+      password: "Mot de passe"
+      button: "Connexion"
+
 
   # Traductions de rails
   date:
