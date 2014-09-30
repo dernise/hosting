@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
     get '/faq' => 'pages#faq', as: :faq
     get '/support' => 'support#home', as: :support
-    get '/order/:id', to: 'order#show'
+    get '/order/:id', to: 'orders#show'
     get '/login', to: 'sessions#new', as: :login
-
+    get '/order/validate/:id', to: 'orders#validate'
 
     resources :sessions
     resources :users

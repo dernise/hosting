@@ -1,2 +1,0 @@
-class ValidateOrderController < ApplicationController
-end

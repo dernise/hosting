@@ -1,5 +1,5 @@
 <div>
   <p>Crediter le compte <%= @account.username %></p>
-  <p>Pack de 100 tokens</p><%= link_to 'Buy with PAYPAL', @cart.paypal_url("", 1, "Pack de 100 Tokens") %>
-  <p>Pack de 200 tokens</p><%= link_to 'Buy with PAYPAL', @cart.paypal_url("", 2, "Pack de 200 Tokens") %>
+  <p>Pack de 100 tokens</p><%= link_to 'Buy with PAYPAL', @cart.paypal_url(@url , 1, "Pack de 100 Tokens") %>
+  <p>Pack de 200 tokens</p><%= link_to 'Buy with PAYPAL', @cart.paypal_url(@url , 2, "Pack de 200 Tokens") %>
 </div>

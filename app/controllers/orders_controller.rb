@@ -5,8 +5,11 @@ class OrdersController < ApplicationController
       redirect_to root_url
     else
       @account = User.find(params[:id].to_i)
+      @url = root_url+"/order/validate/"+params[:id]
     end
+  end
 
-    #@url = root_url+"/users/validate_order/"+params[:id]+"/"
+  def validate
+
   end
 end
