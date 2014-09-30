@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery :with => :exception
   before_action :set_locale
+  helper_method :current_user
 
 
   def set_locale
@@ -16,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     session[:cart_id] ||= Cart.create!.id
-    @current_cart ||= Cart.find(session[:cart_id])
+    return @current_cart ||= Cart.find(session[:cart_id])
   end
 
   private

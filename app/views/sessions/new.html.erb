@@ -1,8 +1,12 @@
+<section id="register-title">
+  <p>Log in to your account</p>
+</section>
+
 <section id="register-content">
   <div class='container'>
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <%= form_for session_path do |f|  %>
+      <%= form_for sessions_path do |f|  %>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
           <%= f.text_field  :username, class:'form-control', placeholder: t('register.username')%>
