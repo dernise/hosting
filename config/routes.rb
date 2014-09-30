@@ -8,8 +8,12 @@ Rails.application.routes.draw do
     #Sign up
     get '/register' => 'users#new', as: :register
     get '/order' => 'orders#show', as: :order
+    get '/faq' => 'pages#faq', as: :faq
+    get '/support' => 'support#home', as: :support
+
     resources :users
     resources :orders
+    resources :faq
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
     # You can have the root of your site routed with "root"
