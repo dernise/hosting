@@ -13,6 +13,7 @@
   <section id='notice'>
     <%= flash[:notice] %>
   </section>
+<% elsif !current_user.nil? %>
 <% else %>
   <section id='login-bar'>
     <div class='container'>

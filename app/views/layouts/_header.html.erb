@@ -25,9 +25,13 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><%= link_to t('navbar.home'), root_path %></a></li>
         <li><a href=""><%= t('navbar.features') %></a></li>
-        <li><a href="#"><%= t('navbar.prices') %></a></li>
-        <li><a href="#"><%= t('navbar.login') %></a></li>
-        <li><%= link_to t('navbar.signup'), register_path %></li>
+        <li><a href=""><%= t('navbar.prices') %></a></li>
+        <% if(!current_user) %>
+          <li><%= link_to t('navbar.login'), login_path %></li>
+          <li><%= link_to t('navbar.signup'), register_path %></li>
+        <% else %>
+          <li><%= link_to t('navbar.logout'), logout_path %></li>
+      <% end %>
       </ul>
     </div>
   </div>

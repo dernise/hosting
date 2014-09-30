@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get '/support' => 'support#home', as: :support
     get '/order/:id', to: 'order#show'
     get '/login', to: 'sessions#new', as: :login
-
+    get '/logout', to: 'sessions#destroy', as: :logout
 
     resources :sessions
     resources :users

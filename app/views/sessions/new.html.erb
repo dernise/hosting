@@ -1,19 +1,29 @@
-<section id="register-title">
-  <p>Log in to your account</p>
-</section>
+<% #TODO: Xavier: Translation of the entire page %>
+<% if (!flash[:alert].nil?) #if there is a notice from any other pages %>
+  <section id="register-error">
+    <%= flash[:alert] %>
+  </section>
+<% else %>
+  <section id="register-title">
+    <p>Log in to your account</p>
+  </section>
+<% end %>
 
 <section id="register-content">
   <div class='container'>
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <%= form_for sessions_path do |f|  %>
+      <%= form_tag sessions_path do %>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-          <%= f.text_field  :username, class:'form-control', placeholder: t('register.username')%>
+          <%= text_field_tag :username, nil, placeholder: 'Login or email', class: 'form-control' %>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          <%= f.text_field :password, type: 'password', class:'form-control', placeholder: t('register.password') %>
+          <%= password_field_tag :password, nil, placeholder: 'Password',class: 'form-control' %>
+        </div>
+        <div class="button-group">
+          <%= submit_tag 'Log in', class: 'btn btn-primary' %>
         </div>
       <%end%>
     </div>

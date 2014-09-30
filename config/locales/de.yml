@@ -5,7 +5,7 @@ de:
     prices: 'Preise'
     login: 'Log in'
     signup: 'Sign up'
-
+    logout: 'Log out'
   footer:
     tos: 'Be sure to take a look at our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>'
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"

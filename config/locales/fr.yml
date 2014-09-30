@@ -5,7 +5,7 @@ fr:
     prices: 'Prix'
     login: 'Connexion'
     signup: 'Inscription'
-
+    logout: 'Déconnexion'
   footer:
     tos: "Soyez sûrs de lire nos <a href='#'>Conditions Générales d'utilisation</a> et <a href='#'>Politique de Confidentialité</a>"
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
