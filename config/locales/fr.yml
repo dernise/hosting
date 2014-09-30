@@ -40,6 +40,13 @@ fr:
     register: "S'inscrire"
     signed_up: "Tu es maintenant inscrit!"
 
+  login:
+      text: "Connectez vous à votre compte"
+      loginormail: "Login ou email"
+      password: "Mot de passe"
+      button: "Connexion"
+
+
   # Traductions de rails
   date:
     abbr_day_names:

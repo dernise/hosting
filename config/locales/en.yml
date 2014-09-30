@@ -60,3 +60,9 @@ en:
     surname: "Surname"
     register: "Register"
     signed_up: "You are now signed up !"
+
+  login:
+    text: "Log in to your account"
+    loginormail: "Login or email"
+    password: "Password"
+    button: "Log in"

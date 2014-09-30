@@ -1,11 +1,11 @@
-<% #TODO: Xavier: Translation of the entire page %>
+<% #TODO: Xavier: Translation of the entire page ---- DONE %>
 <% if (!flash[:alert].nil?) #if there is a notice from any other pages %>
   <section id="register-error">
     <%= flash[:alert] %>
   </section>
 <% else %>
   <section id="register-title">
-    <p>Log in to your account</p>
+    <p><%= t('login.text') %></p>
   </section>
 <% end %>
 
@@ -16,14 +16,14 @@
       <%= form_tag sessions_path do %>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-          <%= text_field_tag :username, nil, placeholder: 'Login or email', class: 'form-control' %>
+          <%= text_field_tag :username, nil, placeholder: t('login.loginormail'), class: 'form-control' %>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          <%= password_field_tag :password, nil, placeholder: 'Password',class: 'form-control' %>
+          <%= password_field_tag :password, nil, placeholder: t('login.password'),class: 'form-control' %>
         </div>
         <div class="button-group">
-          <%= submit_tag 'Log in', class: 'btn btn-primary' %>
+          <%= submit_tag t('login.button'), class: 'btn btn-primary' %>
         </div>
       <%end%>
     </div>
