@@ -1,8 +1,8 @@
 de:
   navbar:
-    home: 'Home'
+    home: 'Startseite'
     features: 'Features'
-    prices: 'Prices'
+    prices: 'Preise'
     login: 'Log in'
     signup: 'Sign up'
 
@@ -11,10 +11,10 @@ de:
     address: "IG2I<br>13 Rue Jean Souvraz,<br>62300 Lens"
 
   home:
-    login_mail: "Login/E-mail"
-    password: "Password"
+    login_mail: "Kundennummer/E-mail"
+    password: "Passwort"
     login: "Login"
-    register: "Register"
+    register: "Registrieren"
     community: "<h3>Join our community of 12,039 happy customers !</h3><br><h5>Deploy your VPS server now.</h5>"
     text: "<h3>A little Sneak-Peek of Hosting Project</h3><p>You can decide whether you want to stop and start the
             contract, your servers are paid hourly</p>"
@@ -31,11 +31,11 @@ de:
   register:
     errors: "Cannot create your account. Please solve the following errors :"
     create: "Create your account now"
-    username: "Username"
-    password: "Password"
+    username: "Benutzername"
+    password: "Passwort"
     confirmation: "Password confirmation"
     email: "Email"
     name: "Name"
     surname: "Surname"
-    register: "Register"
+    register: "Registrieren"
     signed_up: "You are now signed up !"
