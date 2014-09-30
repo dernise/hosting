@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     #Sign up
     get '/register' => 'users#new', as: :register
     get '/order' => 'orders#show', as: :order
+    get '/order/:id', to: 'order#show'
+
+
     resources :users
     resources :orders
     # The priority is based upon order of creation: first created -> highest priority.
