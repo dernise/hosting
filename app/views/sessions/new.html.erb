@@ -1,0 +1,17 @@
+<section id="register-content">
+  <div class='container'>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <%= form_for session_path do |f|  %>
+        <div class="input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          <%= f.text_field  :username, class:'form-control', placeholder: t('register.username')%>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+          <%= f.text_field :password, type: 'password', class:'form-control', placeholder: t('register.password') %>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</section>

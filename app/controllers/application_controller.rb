@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery :with => :exception
   before_action :set_locale
 
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
@@ -16,5 +17,11 @@ class ApplicationController < ActionController::Base
   def current_cart
     session[:cart_id] ||= Cart.create!.id
     @current_cart ||= Cart.find(session[:cart_id])
+  end
+
+  private
+
+  def current_user
+
   end
 end

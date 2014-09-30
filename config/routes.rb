@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   scope "(:locale)", locale: /en|de|fr/ do
     get 'pages/home'
     get 'pages/contact'
@@ -10,10 +12,12 @@ Rails.application.routes.draw do
     get '/order' => 'orders#show', as: :order
     get '/faq' => 'pages#faq', as: :faq
     get '/support' => 'support#home', as: :support
+    get '/order/:id', to: 'order#show'
+    get '/login', to: 'sessions#new', as: :login
 
+    resources :sessions
     resources :users
     resources :orders
-    resources :faq
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
     # You can have the root of your site routed with "root"
