@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   scope "(:locale)", locale: /en|de|fr/ do
     get 'pages/home'
     get 'pages/contact'
@@ -9,8 +11,9 @@ Rails.application.routes.draw do
     get '/register' => 'users#new', as: :register
     get '/order' => 'orders#show', as: :order
     get '/order/:id', to: 'order#show'
+    get '/login', to: 'sessions#new', as: :login
 
-
+    resources :sessions
     resources :users
     resources :orders
     # The priority is based upon order of creation: first created -> highest priority.
