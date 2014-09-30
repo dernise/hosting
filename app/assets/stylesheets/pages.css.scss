@@ -436,8 +436,9 @@ body
 {
   background-color: #34495e;
 
-  a:hover
-  {
+  >li>a:hover, >li>a:focus {
+    color: #bdc3c7;
+    text-decoration: none;
     background-color: #34495e;
   }
 }
