@@ -42,7 +42,7 @@ fr:
 
   login:
       text: "Connectez vous à votre compte"
-      loginormail: "Login ou email"
+      loginormail: "Nom d'utilisateur ou adresse mail"
       password: "Mot de passe"
       button: "Connexion"
 
