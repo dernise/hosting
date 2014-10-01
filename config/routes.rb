@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/login', to: 'sessions#new', as: :login
     get '/logout', to: 'sessions#destroy', as: :logout
     get '/order/validate/:id', to: 'orders#validate'
+    get '/support/ticket/delete/:id', to: 'support#delete_ticket'
 
     resources :sessions
     resources :users
