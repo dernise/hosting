@@ -1,25 +1,34 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|de|fr/ do
+    #Pages
     get 'pages/home'
     get 'pages/contact'
     get 'pages/tos'
+    get '/faq' => 'pages#faq', as: :faq
 
     #Sign up
     get '/register' => 'users#new', as: :register
-    get '/order' => 'orders#show', as: :order
 
-    get '/faq' => 'pages#faq', as: :faq
-    get '/support' => 'support#home', as: :support
-    get '/order/:id', to: 'orders#show'
-    get '/login', to: 'sessions#new', as: :login
-    get '/logout', to: 'sessions#destroy', as: :logout
+    #Orders
+    get '/order' => 'orders#show', as: :order
     get '/order/validate/:id', to: 'orders#validate'
     get '/order/create_payment/:type/:id_pack', to: 'orders#create_payment', as: :create_payment
+    get '/order/:id', to: 'orders#show'
+
+    #Support
+    get '/support' => 'support#home', as: :support
     get '/support/ticket/delete/:id', to: 'support#delete_ticket'
 
+
+    #Sessions
+    get '/login', to: 'sessions#new', as: :login
+    get '/logout', to: 'sessions#destroy', as: :logout
+
+    #Ressources
     resources :sessions
     resources :users
     resources :orders
+
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
     # You can have the root of your site routed with "root"
