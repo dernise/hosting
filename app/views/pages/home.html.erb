@@ -13,8 +13,7 @@
   <section id='notice'>
     <%= flash[:notice] %>
   </section>
-<% elsif !current_user.nil? %>
-<% else %>
+<% elsif current_user.nil? %>
   <section id='login-bar'>
     <div class='container'>
       <input type="email" class="form-control" placeholder='<%= t('home.login_mail') %>'>
