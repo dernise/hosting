@@ -1,2 +1,34 @@
-<h1>Support#home</h1>
-<p>Find me in app/views/support/home.html.erb</p>
+<script>
+function New()
+{
+var div = document.getElementById("new");
+    if(div.style.display == "none")
+    {
+        div.style.display = "";
+    }
+    else
+    {
+        div.style.display = "none";
+    }
+}
+</script>
+
+<h1>This is the support, biatch !</h1>
+<a href="javascript: New()" class="btn btn-primary btn-warning">Open a ticket !</a>
+
+<div id="new" style="display: none;">
+  <h5>Ouverture de ticket</h5>
+</div>
+<br><br>
+
+<h5>Liste de vos ticket(s) non résolus :</h5>
+<%Ticket.where(user_id: current_user, resolved: false).all.each do |ticket|%>
+    <a href="<%= "/support/ticket/delete/#{ticket.id}" %>" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span> Résolu</a>
+    <%= ticket.title %> <br>
+<%end%>
+
+
+<h5>Liste de vos ticket(s) résolus :</h5>
+<%Ticket.where(user_id: current_user, resolved: true).all.each do |ticket|%>
+    <%= ticket.title %> <br>
+<%end%>
