@@ -46,9 +46,9 @@ fr:
       password: "Mot de passe"
       button: "Connexion"
       not_authorized: "You must connect to see this page"
-      loggedin: "Logged in!"
-      invalid: "Email or password is invalid"
-      loggedout: "Logged out!"
+      loggedin: "Connecté !"
+      invalid: "L'adresse mail ou le mot de passe n'est pas valide"
+      loggedout: "Déconnecté !"
 
   # Traductions de rails
   date:
