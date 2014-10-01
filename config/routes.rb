@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'sessions/new'
-
   scope "(:locale)", locale: /en|de|fr/ do
     get 'pages/home'
     get 'pages/contact'
