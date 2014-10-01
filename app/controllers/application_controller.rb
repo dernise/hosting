@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to login_url, alert: 'You must connect to see this page' if current_user.nil? #TODO: Xavier: Translation of this alert
+    redirect_to login_url, alert: t('login.not_authorized') if current_user.nil?
   end
 end

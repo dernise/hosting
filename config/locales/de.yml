@@ -39,3 +39,13 @@ de:
     surname: "Surname"
     register: "Registrieren"
     signed_up: "You are now signed up !"
+
+  login:
+     text: "Log in to your account"
+     loginormail: "Login or email"
+     password: "Password"
+     button: "Log in"
+     not_authorized: "You must connect to see this page"
+     loggedin: "Logged in!"
+     invalid: "Email or password is invalid"
+     loggedout: "Logged out!"
