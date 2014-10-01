@@ -15,11 +15,6 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
-  def current_cart
-    session[:cart_id] ||= Cart.create!.id
-    return @current_cart ||= Cart.find(session[:cart_id])
-  end
-
   private
 
   def current_user

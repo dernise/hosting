@@ -45,3 +45,5 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Debug rails sous windows
 gem 'tzinfo-data'
+
+gem 'paypal-sdk-rest'

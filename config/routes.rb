@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/login', to: 'sessions#new', as: :login
     get '/logout', to: 'sessions#destroy', as: :logout
     get '/order/validate/:id', to: 'orders#validate'
+    get '/order/create_payment/:type/:id_pack', to: 'orders#create_payment', as: :create_payment
 
     resources :sessions
     resources :users
