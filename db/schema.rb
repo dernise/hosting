@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20141001083240) do
 
-  create_table "carts", force: true do |t|
-    t.datetime "purchased_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "messages", force: true do |t|
     t.string   "content"
     t.integer  "ticket_id"
