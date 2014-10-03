@@ -31,7 +31,9 @@ class OrdersController < ApplicationController
   end
 
   def execute_payment
-    execute_paypal_payment
+    if params[:type] == "paypal"
+      execute_paypal_payment
+    end
   end
 
   private
@@ -42,7 +44,7 @@ class OrdersController < ApplicationController
                                                   :payer => {
                                                       :payment_method => "paypal" },
                                                   :redirect_urls => {
-                                                      :return_url => "#{root_url}/order/execute_payment/",
+                                                      :return_url => "#{root_url}/order/execute_payment/paypal/",
                                                       :cancel_url => root_url.to_s },
                                                   :transactions => [ {
                                                                          :amount => {
@@ -66,7 +68,21 @@ class OrdersController < ApplicationController
   end
 
   def execute_paypal_payment
-    @payment = PayPal::SDK::REST::Payment.find(session[:payment_paypal_id])
-    @payment.execute( :payer_id => params[:PayerID] )
+    if(session.has_key?(:payment_paypal_id) && session.has_key?(:id_to_credit))
+      @payment = PayPal::SDK::REST::Payment.find(session[:payment_paypal_id])
+      if(@payment.execute( :payer_id => params[:PayerID] ))
+        token_quantity = Pack.find_by_name(@payment.transactions[0].item_list.items[0].name.to_s).quantity
+        user = User.find(session[:id_to_credit].to_i)
+        user.tokens += token_quantity
+        user.save
+        @validation = "Successfuly added #{token_quantity} tokens to the account #{user.username}!" #TODO: Xavier :P
+      else
+        @validation = "Could not add the tokens to the account. Don't worry, we didn't get any money from you." #TODO: Xavier :P
+      end
+    else
+      @payment.destroy
+      @validation = "You took too much time to complete your order. Please retry. Don't worry, we didn't get any money from you." #TODO: Xavier :P
+      return
+    end
   end
 end

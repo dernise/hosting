@@ -8,7 +8,13 @@ class User < ActiveRecord::Base
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length: { minimum: 6 }
-
+  validates :password, length: { minimum: 6 }, :on => :create
   has_many :tickets
+  after_initialize :defaults
+
+  def defaults
+    unless persisted?
+      self.tokens=0
+    end
+  end
 end

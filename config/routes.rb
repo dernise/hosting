@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     #Orders
     get '/order' => 'orders#show', as: :order
     get '/order/validate/:id', to: 'orders#validate'
-    get '/order/execute_payment/', to: 'orders#execute_payment', as: :execute_payment
+    get '/order/execute_payment/:type', to: 'orders#execute_payment', as: :execute_payment
     get '/order/create_payment/:type/:id_pack', to: 'orders#create_payment', as: :create_payment
     get '/order/:id', to: 'orders#show'
 
