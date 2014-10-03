@@ -75,13 +75,13 @@ class OrdersController < ApplicationController
         user = User.find(session[:id_to_credit].to_i)
         user.tokens += token_quantity
         user.save
-        @validation = "Successfuly added #{token_quantity} tokens to the account #{user.username}!" #TODO: Xavier :P
+        @validation = t('order.success').html_safe
       else
-        @validation = "Could not add the tokens to the account. Don't worry, we didn't get any money from you." #TODO: Xavier :P
+        @validation = t('order.failure')
       end
     else
       @payment.destroy
-      @validation = "You took too much time to complete your order. Please retry. Don't worry, we didn't get any money from you." #TODO: Xavier :P
+      @validation = t('order.time')
       return
     end
   end
