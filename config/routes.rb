@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get '/order/:id', to: 'orders#show'
 
     #Support
-    get '/support' => 'support#home', as: :support
+    get '/support' => 'support#show', as: :support
     get '/support/ticket/delete/:id', to: 'support#delete_ticket'
 
 
