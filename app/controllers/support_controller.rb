@@ -1,6 +1,7 @@
 class SupportController < ApplicationController
   before_action :authorize
-  def home
+  def show
+    @ticket = Ticket.new
   end
 
   def delete_ticket
