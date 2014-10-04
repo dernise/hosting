@@ -50,7 +50,7 @@ fr:
       invalid: "L'adresse mail ou le mot de passe n'est pas valide"
       loggedout: "Déconnecté !"
 
-  order:
+    order:
         success: "L'ajout de #{token_quantity} jetons a été réalisé avec succés sur le compte #{user.username}!"
         failure: "L'ajout des jetons sur le compte a échoué. Pas d'inquiètude, la transaction s'est interrompue."
         time: "Vous avez mis trop de temps pour compléter votre commande. Pas d'inquiètude, la transaction s'est interrompue."
