@@ -1,6 +1,6 @@
 <div class="container">
   <% Pack.all.each do |pack| %>
     <p><%= pack.name %></p>
-    <p><%= link_to "Buy with Paypal", root_url+"/order/create_payment/paypal/"+pack.id.to_s %></p>
+    <p><%= link_to "Buy with Paypal", root_url+"/order/create_payment/paypal/"+pack.id.to_s, class: "btn btn-success" %></p>
   <%end%>
 </div>

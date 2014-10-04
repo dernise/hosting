@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
   def show
     if (!params[:id] || !User.exists?(params[:id].to_i))
       redirect_to root_url
+      return
     else
       @account = User.find(params[:id].to_i)
       session[:id_to_credit] = params[:id]
@@ -72,9 +73,11 @@ class OrdersController < ApplicationController
       @payment = PayPal::SDK::REST::Payment.find(session[:payment_paypal_id])
       if(@payment.execute( :payer_id => params[:PayerID] ))
         token_quantity = Pack.find_by_name(@payment.transactions[0].item_list.items[0].name.to_s).quantity
+
         user = User.find(session[:id_to_credit].to_i)
         user.tokens += token_quantity
         user.save
+
         @validation = "Successfuly added #{token_quantity} tokens to the account #{user.username}!" #TODO: Xavier :P
       else
         @validation = "Could not add the tokens to the account. Don't worry, we didn't get any money from you." #TODO: Xavier :P
@@ -82,7 +85,6 @@ class OrdersController < ApplicationController
     else
       @payment.destroy
       @validation = "You took too much time to complete your order. Please retry. Don't worry, we didn't get any money from you." #TODO: Xavier :P
-      return
     end
   end
 end
