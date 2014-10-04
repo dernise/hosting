@@ -50,7 +50,7 @@ de:
      invalid: "Email or password is invalid"
      loggedout: "Logged out!"
 
-   order:
+  order:
        success: "Successfuly added #{token_quantity} tokens to the account #{user.username}!"
        failure: "Could not add the tokens to the account. Don't worry, we didn't get any money from you."
        time: "You took too much time to complete your order. Please retry. Don't worry, we didn't get any money from you."
